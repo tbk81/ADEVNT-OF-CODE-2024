@@ -2,9 +2,7 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
-	"sort"
 	"strconv"
 	"strings"
 )
@@ -17,7 +15,7 @@ func abs(x int) int {
 }
 
 func main() {
-	file, err := os.Open("/home/trevor/go-projects/ADVENT-OF-CODE-2024/Day-1/numbers.txt")
+	file, err := os.Open("/home/trevor/go-projects/ADVENT-OF-CODE-2024/Day-1-p1/numbers.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -35,12 +33,19 @@ func main() {
 		ls2 = append(ls2, num2)
 	}
 
-	sort.Ints(ls1)
-	sort.Ints(ls2)
+	for _, v := range ls1 {
 
-	sum := 0
-	for i := 0; i < len(ls1); i++ {
-		sum += abs(ls1[i] - ls2[i])
 	}
-	fmt.Println(sum)
+
+	// res1 := sort.SearchInts(ls1, 37397)
+	// fmt.Println(res1)
+
+	// sort.Ints(ls1)
+	// sort.Ints(ls2)
+
+	// sum := 0
+	// for i := 0; i < len(ls1); i++ {
+	// 	sum += abs(ls1[i] - ls2[i])
+	// }
+	// fmt.Println(sum)
 }
